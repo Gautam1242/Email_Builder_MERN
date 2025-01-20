@@ -3,6 +3,7 @@ import axios from "axios";
 import {toast} from "react-toastify"
 
 const EmailBuilder = () => {
+  const url="https://email-builder-backend-0sk9.onrender.com";
   const [title, setTitle] = useState("Sample Title");
   const [content, setContent] = useState("Sample content...");
   const [imageUrl, setImageUrl] = useState("");
@@ -10,7 +11,7 @@ const EmailBuilder = () => {
 
   const getEmailData = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/api/fetch", {
+      const response = await axios.get(url+"/api/fetch", {
         params: { category },
       });
 
@@ -27,7 +28,7 @@ const EmailBuilder = () => {
 
   const saveUserEmail = async () => {
     try {
-      const response = await axios.post("http://localhost:3000/api/user", {
+      const response = await axios.post(url+"/api/user", {
         title,
         content,
         category,
