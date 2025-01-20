@@ -130,7 +130,7 @@ const EmailBuilder = () => {
     <img src="${imageUrl}" alt="Image" class="email-image" />
 
     <div class="footer">
-      <p>Thank you for reading our email. <a href="http://localhost:5173/">Visit our site</a></p>
+      <p>Thank you for reading our email. <a href="https://email-builder-frontend-8po7.onrender.com/">Visit our site</a></p>
     </div>
   </div>
 
